@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Lora, Playfair_Display } from "next/font/google";
+import { Playfair_Display, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -8,20 +8,20 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const lora = Lora({
+const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
-  variable: "--font-lora",
+  variable: "--font-source-serif",
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0D1B2A",
+  themeColor: "#031425",
 };
 
 export const metadata: Metadata = {
   title: "Programa CASS",
   description:
-    "Programa de Investigación y Tratamiento de Conductas Adictivas Sin Sustancia — excelencia clínica y científica.",
+    "Programa de Investigación y Tratamiento de Conductas Adictivas Sin Sustancia.",
   openGraph: {
     title: "Programa CASS",
     description:
@@ -39,11 +39,17 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${lora.variable} h-full scroll-smooth antialiased`}
+      className={`dark ${playfair.variable} ${sourceSerif.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full bg-cass-bg font-body text-cass-cream">
-        <div className="cass-grain" aria-hidden />
-        <div className="cass-content">{children}</div>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+        />
+      </head>
+      <body className="flex min-h-[max(884px,100dvh)] flex-col bg-hero-bg text-on-surface">
+        <div className="noise-bg" aria-hidden />
+        {children}
       </body>
     </html>
   );

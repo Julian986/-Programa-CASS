@@ -1,222 +1,221 @@
 export default function Home() {
   return (
-    <div className="flex min-h-full flex-col">
-      {/* Hero */}
-      <header className="border-b border-cass-border px-5 pb-14 pt-10 sm:px-8 sm:pb-20 sm:pt-14">
-        <div className="mx-auto max-w-3xl">
-          <p
-            className="font-display text-center text-[0.65rem] font-normal uppercase tracking-[0.55em] text-cass-gold opacity-0 animate-fade-up sm:text-left"
-            style={{ animationDelay: "0.05s" }}
-          >
-            CASS
-          </p>
-          <h1
-            className="mt-4 text-center font-display text-[2.15rem] font-medium leading-[1.12] tracking-tight text-cass-cream opacity-0 animate-fade-up sm:text-left sm:text-5xl md:text-6xl"
-            style={{ animationDelay: "0.15s" }}
-          >
-            Programa CASS
-          </h1>
-          <p
-            className="mt-4 text-center font-display text-lg font-normal leading-snug text-cass-muted opacity-0 animate-fade-up sm:text-left sm:text-xl md:text-2xl"
-            style={{ animationDelay: "0.25s" }}
-          >
-            Investigación y Tratamiento de Conductas Adictivas Sin Sustancia
-          </p>
-          <div
-            className="mx-auto mt-8 h-px w-20 bg-cass-gold/50 opacity-0 animate-fade-up sm:mx-0"
-            style={{ animationDelay: "0.35s" }}
-            aria-hidden
-          />
-          <div
-            className="mt-10 border-l-2 border-cass-gold pl-5 opacity-0 animate-fade-up sm:pl-6"
-            style={{ animationDelay: "0.45s" }}
-          >
-            <p className="text-[0.95rem] leading-relaxed text-cass-cream/95 sm:text-base">
-              Las conductas adictivas sin sustancia —juego, apuestas, uso
-              problemático de tecnología, alimentación, sexo y otras
-              modalidades— constituyen un desafío clínico creciente. El Programa
-              CASS integra rigor científico y un abordaje humano para
-              comprenderlas, investigarlas y tratarlas con la excelencia que
-              merecen las personas y sus familias.
-            </p>
-          </div>
+    <>
+      {/* TopAppBar */}
+      <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-accent-gold/30 bg-hero-bg/90 px-6 py-4 backdrop-blur-md">
+        <button
+          type="button"
+          className="text-accent-gold transition-colors duration-300 hover:text-white focus:outline-none"
+          aria-label="Abrir menú"
+        >
+          <span className="material-symbols-outlined">menu</span>
+        </button>
+        <div className="font-display-lg text-2xl font-black tracking-tighter text-accent-gold">
+          CASS
         </div>
+        <button
+          type="button"
+          className="text-accent-gold transition-colors duration-300 hover:text-white focus:outline-none"
+          aria-label="Notas clínicas"
+        >
+          <span className="material-symbols-outlined">clinical_notes</span>
+        </button>
       </header>
 
-      <main className="flex-1">
+      <main className="content-wrapper mx-auto mb-section-padding flex w-full max-w-[1120px] grow flex-col items-center px-6 pb-section-padding pt-[100px] md:px-margin-edge">
+        {/* Hero */}
+        <section className="mb-section-padding mt-12 flex min-h-[618px] w-full flex-col items-center justify-center text-center">
+          <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-accent-gold">
+            <span className="font-display-lg text-display-lg text-accent-gold">
+              C
+            </span>
+          </div>
+          <h1 className="font-display-lg mb-4 text-display-lg text-on-surface">
+            Programa CASS
+          </h1>
+          <p className="font-headline-sm text-headline-sm mb-8 max-w-2xl text-tertiary">
+            Investigación y Tratamiento de Conductas Adictivas Sin Sustancia
+          </p>
+          <div className="mb-8 h-px w-24 bg-accent-gold" aria-hidden />
+          <p className="font-body-lg text-body-lg mx-auto max-w-3xl leading-relaxed text-on-surface-variant opacity-90">
+            Un espacio dedicado a la comprensión profunda y el abordaje clínico
+            de vanguardia para las adicciones conductuales. Combinamos el rigor
+            académico con una atención compasiva y especializada.
+          </p>
+        </section>
+
         {/* Sobre el programa */}
-        <section
-          id="programa"
-          className="border-b border-cass-border px-5 py-14 sm:px-8 sm:py-20"
-          aria-labelledby="titulo-programa"
-        >
-          <div className="mx-auto max-w-3xl opacity-0 animate-fade-up-slow" style={{ animationDelay: "0.1s" }}>
-            <div className="mb-8 h-px w-full max-w-xs bg-gradient-to-r from-cass-gold/60 via-cass-gold/25 to-transparent" aria-hidden />
-            <h2
-              id="titulo-programa"
-              className="font-display text-2xl font-medium tracking-tight text-cass-cream sm:text-3xl"
-            >
-              ¿Qué es el Programa CASS?
-            </h2>
-            <div className="mt-8 space-y-5 text-[0.95rem] leading-relaxed text-cass-muted sm:text-base">
-              <p className="text-cass-cream/90">
-                Las adicciones comportamentales se manifiestan mediante
-                conductas repetidas que generan pérdida de control, sufrimiento
-                y deterioro en la vida cotidiana, sin necesidad de una sustancia
-                psicoactiva. Su estudio y tratamiento exigen marcos teóricos
-                actualizados y protocolos basados en evidencia.
-              </p>
-              <p>
-                El Programa CASS articula{" "}
-                <strong className="font-medium text-cass-cream">
-                  investigación clínica
-                </strong>
-                , formación y atención especializada para personas que atraviesan
-                estas problemáticas, con un enfoque bio-psico-social respetuoso y
-                confidencial.
-              </p>
-              <p>
-                Está dirigido a quienes buscan un{" "}
-                <strong className="font-medium text-cass-cream">
-                  tratamiento serio y diferenciado
-                </strong>
-                , a profesionales de la salud mental que desean actualizar su
-                práctica y a instituciones comprometidas con la calidad asistencial
-                en adicciones comportamentales.
-              </p>
+        <section className="mb-section-padding w-full">
+          <div className="flex flex-col gap-gutter md:flex-row">
+            <div className="md:w-1/3">
+              <h2 className="font-display-md text-display-md relative mb-6 text-on-surface">
+                ¿Qué es el Programa CASS?
+                <div
+                  className="absolute -left-4 top-0 hidden h-full w-0.5 bg-accent-gold opacity-50 md:block"
+                  aria-hidden
+                />
+              </h2>
             </div>
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {[
-                {
-                  title: "Investigación Clínica",
-                  text: "Producción y aplicación de conocimiento riguroso para mejorar el diagnóstico y las intervenciones.",
-                },
-                {
-                  title: "Tratamiento Especializado",
-                  text: "Planes terapéuticos individualizados, con seguimiento ético y estándares de excelencia.",
-                },
-                {
-                  title: "Enfoque Interdisciplinario",
-                  text: "Integración de miradas clínica, neurocientífica y psicosocial en cada proceso.",
-                },
-              ].map((card) => (
-                <article
-                  key={card.title}
-                  className="border border-cass-border bg-cass-surface/60 px-4 py-5 backdrop-blur-sm transition-colors hover:border-cass-gold/35"
-                >
-                  <h3 className="font-display text-base font-medium text-cass-gold">
-                    {card.title}
+            <div className="md:w-2/3">
+              <p className="font-body-md text-body-md mb-12 text-on-surface-variant">
+                El Programa CASS es una iniciativa pionera centrada en el estudio
+                y tratamiento de trastornos relacionados con juegos de azar, uso
+                problemático de tecnología, videojuegos y otras conductas
+                adictivas que no involucran sustancias químicas. Nuestro objetivo
+                es restaurar el equilibrio y la salud mental a través de
+                intervenciones basadas en la evidencia científica.
+              </p>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+                <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
+                  <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
+                    science
+                  </span>
+                  <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
+                    Investigación Clínica
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-cass-muted">
-                    {card.text}
-                  </p>
-                </article>
-              ))}
+                </div>
+                <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
+                  <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
+                    healing
+                  </span>
+                  <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
+                    Tratamiento Especializado
+                  </h3>
+                </div>
+                <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
+                  <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
+                    group
+                  </span>
+                  <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
+                    Enfoque Interdisciplinario
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Dirección */}
-        <section
-          id="direccion"
-          className="border-b border-cass-border px-5 py-14 sm:px-8 sm:py-20"
-          aria-labelledby="titulo-direccion"
-        >
-          <div className="mx-auto max-w-3xl opacity-0 animate-fade-up-slow" style={{ animationDelay: "0.15s" }}>
-            <div className="mb-8 h-px w-full max-w-xs bg-gradient-to-r from-cass-gold/60 via-cass-gold/25 to-transparent" aria-hidden />
-            <h2
-              id="titulo-direccion"
-              className="font-display text-2xl font-medium tracking-tight text-cass-cream sm:text-3xl"
-            >
-              Dirección
-            </h2>
-            <div className="mt-8 border-l-2 border-cass-gold bg-cass-surface/40 py-6 pl-5 sm:pl-7">
-              <p className="font-display text-xl font-medium text-cass-gold sm:text-2xl">
+        <section className="mb-section-padding w-full">
+          <div className="relative rounded-[0.25rem] border border-accent-gold/20 bg-card-surface p-8 md:p-12">
+            <div
+              className="absolute left-0 top-12 h-32 w-[3px] bg-accent-gold"
+              aria-hidden
+            />
+            <div className="pl-6">
+              <h2 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-accent-gold">
+                Dirección
+              </h2>
+              <h3 className="font-display-md text-display-md mb-6 text-on-surface">
                 Dr. Alejandro Sánchez
-              </p>
-              <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-cass-muted sm:text-base">
-                Psicólogo de amplia trayectoria en el campo de las conductas
-                adictivas, combina práctica clínica de alto nivel con docencia e
-                investigación reconocida internacionalmente, guiando al Programa
-                CASS con rigor científico y una mirada profundamente humana.
+              </h3>
+              <p className="font-body-md text-body-md max-w-3xl text-on-surface-variant">
+                Especialista en psiquiatría y experto reconocido internacionalmente
+                en el campo de las adicciones conductuales. Con más de dos décadas
+                de experiencia clínica y académica, el Dr. Sánchez lidera el
+                Programa CASS con un compromiso inquebrantable hacia la excelencia
+                médica, la investigación innovadora y el trato digno a cada
+                paciente, integrando los últimos avances neurocientíficos con una
+                perspectiva profundamente humana.
               </p>
             </div>
           </div>
         </section>
 
         {/* Contacto */}
-        <section
-          id="contacto"
-          className="px-5 py-14 sm:px-8 sm:py-20"
-          aria-labelledby="titulo-contacto"
-        >
-          <div className="mx-auto max-w-3xl opacity-0 animate-fade-up-slow" style={{ animationDelay: "0.2s" }}>
-            <div className="mb-8 h-px w-full max-w-xs bg-gradient-to-r from-cass-gold/60 via-cass-gold/25 to-transparent" aria-hidden />
-            <h2
-              id="titulo-contacto"
-              className="font-display text-2xl font-medium tracking-tight text-cass-cream sm:text-3xl"
-            >
+        <section className="mb-section-padding w-full">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="font-display-md text-display-md mb-12 text-on-surface">
               Contacto
             </h2>
-            <ul className="mt-10 space-y-8 text-[0.95rem] leading-relaxed sm:text-base">
-              <li className="text-cass-muted">
-                <span className="mr-2 text-cass-gold/90" aria-hidden>
-                  📍
+            <div className="grid w-full max-w-4xl grid-cols-1 gap-12 md:grid-cols-3">
+              <div className="flex flex-col items-center">
+                <span className="material-symbols-outlined mb-4 text-4xl text-accent-gold">
+                  location_on
                 </span>
-                {/* TODO: Reemplazar con la dirección física real del programa */}
-                <span className="text-cass-cream/90">
-                  Dirección: disponible próximamente.
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Sede Central
+                  <br />
+                  Buenos Aires, Argentina
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="material-symbols-outlined mb-4 text-4xl text-accent-gold">
+                  phone_iphone
                 </span>
-              </li>
-              <li>
                 <a
+                  className="font-body-md text-body-md text-on-surface-variant transition-colors duration-300 hover:text-accent-gold"
                   href="https://wa.me/5492235220806"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full max-w-sm items-center justify-center rounded-sm border border-cass-border bg-cass-surface/80 px-5 py-3.5 font-medium text-cass-cream transition-all hover:border-[#25D366]/60 hover:bg-[#25D366]/15 hover:text-[#dcf8c6] sm:w-auto"
-                >
-                  Escribir por WhatsApp
-                </a>
-                <p className="mt-2 text-sm text-cass-muted">
-                  +54 9 2235 22-0806
-                </p>
-              </li>
-              <li>
-                <span className="block text-xs font-medium uppercase tracking-wider text-cass-gold/80">
-                  Teléfono
-                </span>
-                <a
-                  href="tel:+5492235220806"
-                  className="link-gold mt-1 inline-block text-lg text-cass-cream"
                 >
                   +54 9 2235 22-0806
                 </a>
-              </li>
-              <li>
-                <span className="block text-xs font-medium uppercase tracking-wider text-cass-gold/80">
-                  Correo electrónico
-                </span>
-                {/* TODO: Reemplazar href mailto: y el texto visible con el correo institucional real */}
                 <a
-                  href="mailto:contacto@programacass.invalid"
-                  className="link-gold mt-1 inline-block text-cass-muted"
+                  className="font-label-caps text-label-caps mt-4 flex items-center gap-2 rounded-sm bg-accent-gold px-6 py-2 text-hero-bg transition-opacity hover:opacity-90"
+                  href="https://wa.me/5492235220806"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Correo institucional en actualización
+                  <span className="material-symbols-outlined text-sm">chat</span>
+                  WhatsApp
                 </a>
-                <p className="mt-1.5 text-xs text-cass-muted/85">
-                  Pronto publicaremos la dirección oficial de contacto.
-                </p>
-              </li>
-            </ul>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="material-symbols-outlined mb-4 text-4xl text-accent-gold">
+                  mail
+                </span>
+                <a
+                  className="font-body-md text-body-md text-on-surface-variant transition-colors duration-300 hover:text-accent-gold"
+                  href="mailto:info@programacass.org"
+                >
+                  info@programacass.org
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-cass-border px-5 py-8 sm:px-8">
-        <p className="mx-auto max-w-3xl text-center text-xs text-cass-muted opacity-0 animate-fade-up" style={{ animationDelay: "0.35s" }}>
-          © 2025 Programa CASS — Todos los derechos reservados
-        </p>
+      <footer className="w-full border-t border-accent-gold/20 bg-hero-bg">
+        <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center gap-8 px-8 py-20">
+          <div className="font-display-lg text-lg font-bold text-accent-gold">
+            CASS
+          </div>
+          <nav
+            className="flex flex-wrap justify-center gap-6"
+            aria-label="Enlaces del pie"
+          >
+            <a
+              className="font-display-md text-sm font-semibold italic text-accent-gold underline decoration-1 transition-colors hover:text-accent-gold"
+              href="#"
+            >
+              Research
+            </a>
+            <a
+              className="font-display-md text-sm font-semibold italic text-slate-500 underline decoration-1 transition-colors hover:text-accent-gold"
+              href="#"
+            >
+              Clinical Team
+            </a>
+            <a
+              className="font-display-md text-sm font-semibold italic text-slate-500 underline decoration-1 transition-colors hover:text-accent-gold"
+              href="#"
+            >
+              Privacy Policy
+            </a>
+            <a
+              className="font-display-md text-sm font-semibold italic text-slate-500 underline decoration-1 transition-colors hover:text-accent-gold"
+              href="#"
+            >
+              Contact
+            </a>
+          </nav>
+          <p className="font-display-md text-center text-sm italic text-slate-500">
+            © 2024 Programa CASS. Clinical Excellence & Academic Rigor.
+          </p>
+        </div>
       </footer>
-    </div>
+    </>
   );
 }
