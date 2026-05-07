@@ -274,7 +274,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 gap-2">
                   <p className="font-body-md text-body-md text-white">
                     <span className="text-accent-gold">Fecha:</span> Jueves 14 de
-                    mayo de 2025
+                    mayo de 2026
                   </p>
                   <p className="font-body-md text-body-md text-white">
                     <span className="text-accent-gold">Hora:</span> 17:00 hs
@@ -525,7 +525,7 @@ export default function Home() {
             ))}
           </nav>
           <p className="font-display-md max-w-md text-center text-sm italic text-slate-500">
-            © 2025 Programa CASS — Conductas Adictivas Sin Sustancia — Mar del
+            © 2026 Programa CASS — Conductas Adictivas Sin Sustancia — Mar del
             Plata — Desde 2007.
           </p>
         </div>

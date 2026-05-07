@@ -84,7 +84,7 @@ export default function EventFlyerModal() {
                     Fecha:
                   </p>
                   <p className="font-body-md text-body-md text-left text-white">
-                    Jueves 14 de mayo de 2025
+                    Jueves 14 de mayo de 2026
                   </p>
                 </div>
                 <div className="grid grid-cols-[88px_1fr] gap-3">
