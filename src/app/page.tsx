@@ -12,7 +12,6 @@ export default function Home() {
     { href: "#sedes", label: "Sedes" },
     { href: "#contacto", label: "Contacto" },
     { href: "#recursos", label: "Recursos" },
-    { href: "#logo", label: "Logo" },
   ];
 
   return (
@@ -485,22 +484,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="logo" className="mb-section-padding w-full scroll-mt-[100px]">
-          <h2 className="font-display-md text-display-md mb-4 text-on-surface">
-            Indicación sobre el logo
-          </h2>
-          <div className="rounded-sm border border-accent-gold/30 bg-card-surface p-6">
-            <p className="font-body-md text-body-md text-on-surface-variant">
-              El logo actual —la letra C aislada— debe ser reemplazado. El
-              nuevo logo no debe contener una sola letra sino las siglas
-              completas CASS o un símbolo que no dependa de una inicial.
-            </p>
-            <p className="font-body-md text-body-md mt-4 text-on-surface-variant">
-              Esta propuesta debe formar parte del trabajo de diseño, ya que el
-              nuevo logo también va a utilizarse en Instagram.
-            </p>
-          </div>
-        </section>
+        {/* Nota interna: indicaciones sobre logo se gestionan fuera del frontend. */}
       </main>
 
       <footer className="w-full border-t border-accent-gold/20 bg-hero-bg">
