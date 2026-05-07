@@ -2,6 +2,9 @@
 
 Cositas:
 
+Actualmente: cambios de logo no subidos porque no estan bien
+
+
 - En el mail lo ideal seria: info@programacass.org
 
 - Hacer funciones de los botones del header

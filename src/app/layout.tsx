@@ -2,6 +2,17 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
+/** URL pública del sitio (WhatsApp/OG necesitan URL absoluta). Prioridad: env → Vercel → local. */
+function getMetadataBase(): URL {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return new URL(process.env.NEXT_PUBLIC_SITE_URL);
+  }
+  if (process.env.VERCEL_URL) {
+    return new URL(`https://${process.env.VERCEL_URL}`);
+  }
+  return new URL("http://localhost:8452");
+}
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
@@ -18,16 +29,32 @@ export const viewport: Viewport = {
   themeColor: "#031425",
 };
 
+const ogImagePath = "/programa cass.png";
+
 export const metadata: Metadata = {
+  metadataBase: getMetadataBase(),
   title: "Programa CASS",
   description:
-    "Programa de Investigación y Tratamiento de Conductas Adictivas Sin Sustancia.",
+    "Investigación, tratamiento y prevención de conductas adictivas sin sustancia en Mar del Plata, desde 2007.",
   openGraph: {
     title: "Programa CASS",
     description:
-      "Investigación y tratamiento de conductas adictivas sin sustancia.",
+      "Investigación, tratamiento y prevención de conductas adictivas sin sustancia. Mar del Plata, desde 2007.",
     locale: "es_AR",
     type: "website",
+    images: [
+      {
+        url: ogImagePath,
+        alt: "Programa CASS",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Programa CASS",
+    description:
+      "Investigación, tratamiento y prevención de conductas adictivas sin sustancia. Mar del Plata, desde 2007.",
+    images: [ogImagePath],
   },
 };
 
