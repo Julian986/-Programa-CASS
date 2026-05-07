@@ -3,9 +3,9 @@ import EventFlyerModal from "./components/EventFlyerModal";
 export default function Home() {
   const navItems = [
     { href: "#inicio", label: "Inicio" },
+    { href: "#programa", label: "Programa" },
     { href: "#ayuda", label: "¿Cómo ayudarte?" },
     { href: "#ideas", label: "Ideas frecuentes" },
-    { href: "#programa", label: "Programa" },
     { href: "#ejes", label: "Ejes" },
     { href: "#actividades", label: "Actividades" },
     { href: "#direccion", label: "Dirección" },
@@ -62,89 +62,6 @@ export default function Home() {
           <div className="mt-8">
             <EventFlyerModal />
           </div>
-        </section>
-
-        <section id="ayuda" className="mb-section-padding w-full scroll-mt-[100px]">
-          <h2 className="font-display-md text-display-md mb-6 text-on-surface">
-            ¿Cómo podemos ayudarte?
-          </h2>
-          <p className="font-body-md text-body-md mb-8 max-w-4xl text-on-surface-variant">
-            Cada persona que llega al Programa CASS atraviesa una situación
-            única. Por eso nuestro primer paso es siempre una evaluación que
-            nos permite entender el tipo y la gravedad de la conducta, para
-            ofrecer la respuesta más adecuada a cada caso.
-          </p>
-          <p className="font-label-caps text-label-caps mb-4 text-accent-gold">
-            Lista de servicios
-          </p>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {[
-              "Evaluación clínica inicial para determinar el tipo de tratamiento más adecuado",
-              "Tratamiento psicológico individual",
-              "Tratamiento grupal",
-              "Terapia familiar y orientación a familias",
-              "Seguimiento y prevención de recaídas",
-              "Información y psicoeducación",
-              "Derivación a especialistas según cada caso — incluyendo profesionales para adolescentes",
-              "Desarrollo de programas de prevención e investigación comunitaria",
-            ].map((item) => (
-              <article
-                key={item}
-                className="rounded-sm border border-accent-gold/20 bg-card-surface p-5"
-              >
-                <div className="mb-3 flex items-center gap-2 text-accent-gold">
-                  <span className="material-symbols-outlined text-base">
-                    check_circle
-                  </span>
-                  <span className="font-label-caps text-label-caps">
-                    Servicio
-                  </span>
-                </div>
-                <p className="font-body-md text-body-md text-on-surface-variant">
-                  {item}
-                </p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="ideas" className="mb-section-padding w-full scroll-mt-[100px]">
-          <h2 className="font-display-md text-display-md mb-3 text-on-surface">
-            Ideas que nos alejan de pedir ayuda
-          </h2>
-          <p className="font-body-md text-body-md mb-8 text-on-surface-variant">
-            Estas creencias son frecuentes en personas con problemas de juego.
-            Reconocerlas es el primer paso.
-          </p>
-          <p className="font-label-caps text-label-caps mb-4 text-accent-gold">
-            Las 8 frases
-          </p>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {[
-              '"Los juegos de azar son un medio fácil de ganar dinero."',
-              '"No hay ningún mal en pedir prestado para jugar."',
-              '"Siempre puedo recuperar lo que perdí."',
-              '"Soy una persona con mucha suerte."',
-              '"Esta máquina está a punto de dar el premio."',
-              '"Mi número va a salir si sigo comprando siempre el mismo."',
-              '"Yo no tengo un problema de juego, tengo un problema de dinero."',
-              '"El juego es una manera de escapar de mis problemas."',
-            ].map((item) => (
-              <article
-                key={item}
-                className="rounded-sm border border-accent-gold/20 bg-card-surface p-5"
-              >
-                <p className="font-body-md text-body-md italic text-on-surface-variant">
-                  {item}
-                </p>
-              </article>
-            ))}
-          </div>
-          <p className="font-body-md text-body-md mt-8 text-on-surface-variant">
-            Si alguna de estas ideas le resulta familiar, el Programa CASS puede
-            ayudarle a entender qué está pasando. La consulta no compromete a
-            nada.
-          </p>
         </section>
 
         <section id="programa" className="mb-section-padding w-full scroll-mt-[100px]">
@@ -239,6 +156,81 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section id="ayuda" className="mb-section-padding w-full scroll-mt-[100px]">
+          <h2 className="font-display-md text-display-md mb-6 text-on-surface">
+            ¿Cómo podemos ayudarte?
+          </h2>
+          <p className="font-body-md text-body-md mb-8 max-w-4xl text-on-surface-variant">
+            Cada persona que llega al Programa CASS atraviesa una situación
+            única. Por eso nuestro primer paso es siempre una evaluación que
+            nos permite entender el tipo y la gravedad de la conducta, para
+            ofrecer la respuesta más adecuada a cada caso.
+          </p>
+          <p className="font-label-caps text-label-caps mb-4 text-accent-gold">
+            Lista de servicios
+          </p>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {[
+              "Evaluación clínica inicial para determinar el tipo de tratamiento más adecuado",
+              "Tratamiento psicológico individual",
+              "Tratamiento grupal",
+              "Terapia familiar y orientación a familias",
+              "Seguimiento y prevención de recaídas",
+              "Información y psicoeducación",
+              "Derivación a especialistas según cada caso — incluyendo profesionales para adolescentes",
+              "Desarrollo de programas de prevención e investigación comunitaria",
+            ].map((item) => (
+              <article key={item} className="py-1">
+                <h3 className="font-body-md text-body-md flex items-start gap-2 font-semibold text-on-surface">
+                  <span className="material-symbols-outlined mt-0.5 text-base text-accent-gold">
+                    check_circle
+                  </span>
+                  <span>{item}</span>
+                </h3>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="ideas" className="mb-section-padding w-full scroll-mt-[100px]">
+          <h2 className="font-display-md text-display-md mb-3 text-on-surface">
+            Ideas que nos alejan de pedir ayuda
+          </h2>
+          <p className="font-body-md text-body-md mb-8 text-on-surface-variant">
+            Estas creencias son frecuentes en personas con problemas de juego.
+            Reconocerlas es el primer paso.
+          </p>
+          <p className="font-label-caps text-label-caps mb-4 text-accent-gold">
+            Las 8 frases
+          </p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {[
+              '"Los juegos de azar son un medio fácil de ganar dinero."',
+              '"No hay ningún mal en pedir prestado para jugar."',
+              '"Siempre puedo recuperar lo que perdí."',
+              '"Soy una persona con mucha suerte."',
+              '"Esta máquina está a punto de dar el premio."',
+              '"Mi número va a salir si sigo comprando siempre el mismo."',
+              '"Yo no tengo un problema de juego, tengo un problema de dinero."',
+              '"El juego es una manera de escapar de mis problemas."',
+            ].map((item) => (
+              <article
+                key={item}
+                className="rounded-sm border border-accent-gold/20 bg-card-surface p-5"
+              >
+                <p className="font-body-md text-body-md italic text-on-surface-variant">
+                  {item}
+                </p>
+              </article>
+            ))}
+          </div>
+          <p className="font-body-md text-body-md mt-8 text-on-surface-variant">
+            Si alguna de estas ideas le resulta familiar, el Programa CASS puede
+            ayudarle a entender qué está pasando. La consulta no compromete a
+            nada.
+          </p>
         </section>
 
         <section id="actividades" className="mb-section-padding w-full scroll-mt-[100px]">
@@ -509,7 +501,7 @@ export default function Home() {
             ))}
           </nav>
           <p className="font-display-md max-w-md text-center text-sm italic text-slate-500">
-            © 2026 Programa CASS — Conductas Adictivas Sin Sustancia — Mar del
+            © 2026alt Programa CASS — Conductas Adictivas Sin Sustancia — Mar del
             Plata — Desde 2007.
           </p>
         </div>
