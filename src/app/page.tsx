@@ -1,3 +1,5 @@
+import EventFlyerModal from "./components/EventFlyerModal";
+
 export default function Home() {
   const navItems = [
     { href: "#inicio", label: "Inicio" },
@@ -58,6 +60,9 @@ export default function Home() {
             Trabajamos desde la evidencia clínica y el compromiso con la
             comunidad.
           </p>
+          <div className="mt-8">
+            <EventFlyerModal />
+          </div>
         </section>
 
         <section id="ayuda" className="mb-section-padding w-full scroll-mt-[100px]">
@@ -238,9 +243,12 @@ export default function Home() {
         </section>
 
         <section id="actividades" className="mb-section-padding w-full scroll-mt-[100px]">
-          <h2 className="font-display-md text-display-md mb-8 text-on-surface">
-            Actividades próximas
-          </h2>
+          <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+            <h2 className="font-display-md text-display-md text-on-surface">
+              Actividades próximas
+            </h2>
+            <EventFlyerModal />
+          </div>
           <div className="grid grid-cols-1 gap-6">
             <article className="rounded-sm border border-accent-gold/30 bg-card-surface p-6">
               <h3 className="font-display-md text-2xl text-on-surface">
