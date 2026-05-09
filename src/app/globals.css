@@ -153,3 +153,8 @@ body {
 .material-symbols-outlined.text-sm {
   font-size: 0.875rem;
 }
+
+/* Menú móvil abierto (misma idea que marianutricion: bloquear scroll) */
+body.menu-open {
+  overflow: hidden;
+}

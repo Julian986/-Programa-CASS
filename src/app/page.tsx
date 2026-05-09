@@ -1,4 +1,5 @@
 import EventFlyerModal from "./components/EventFlyerModal";
+import SiteHeader from "./components/SiteHeader";
 
 export default function Home() {
   const navItems = [
@@ -16,24 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-accent-gold/30 bg-hero-bg/90 px-6 py-4 backdrop-blur-md">
-        <span className="material-symbols-outlined text-accent-gold" aria-hidden>
-          psychology
-        </span>
-        <a
-          href="#inicio"
-          className="font-display-lg text-2xl font-black tracking-tighter text-accent-gold transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-gold/60"
-        >
-          Programa CASS
-        </a>
-        <a
-          href="#contacto"
-          className="text-accent-gold transition-colors duration-300 hover:text-white focus:outline-none"
-          aria-label="Ir a contacto"
-        >
-          <span className="material-symbols-outlined">call</span>
-        </a>
-      </header>
+      <SiteHeader items={navItems} />
 
       <main className="content-wrapper mx-auto flex w-full max-w-[1120px] grow flex-col items-center px-6 pb-10 pt-[100px] md:px-margin-edge">
         <section
@@ -91,68 +75,70 @@ export default function Home() {
                 requieren, contamos con una red de derivación a colegas
                 especializados según el perfil y la edad de cada persona.
               </p>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-3" id="ejes">
-                <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
-                  <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
-                    psychology_alt
-                  </span>
-                  <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
-                    Eje 1 — Asistencial
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Evaluación clínica, diagnóstico diferencial y tratamiento
-                    psicológico individualizado. Atención de adultos con
-                    conductas adictivas sin sustancia: juego patológico,
-                    apuestas online, uso problemático de tecnologías, compras
-                    compulsivas, entre otras. Orientación a familias y
-                    prevención de recaídas. Para casos que requieren atención
-                    especializada en adolescencia, contamos con una red de
-                    derivación a profesionales de confianza.
-                  </p>
-                </div>
-                <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
-                  <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
-                    science
-                  </span>
-                  <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
-                    Eje 2 — Investigación
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Registro sistemático de casos, seguimiento de resultados
-                    clínicos. Revisión permanente de evidencia actualizada.
-                    Articulación con referentes nacionales e internacionales en
-                    el campo de las adicciones conductuales.
-                  </p>
-                </div>
-                <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
-                  <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
-                    group
-                  </span>
-                  <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
-                    Eje 3 — Prevención y comunidad
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Charlas abiertas y gratuitas para familias, docentes y
-                    vecinos. Talleres de sensibilización e información.
-                    Articulación con instituciones educativas y de salud. La
-                    información es nuestra primera herramienta de prevención.
-                  </p>
-                </div>
+            </div>
+          </div>
+          <div id="ejes" className="mt-8 w-full scroll-mt-[100px] md:mt-10">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+              <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
+                <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
+                  psychology_alt
+                </span>
+                <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
+                  Eje 1 — Asistencial
+                </h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Evaluación clínica, diagnóstico diferencial y tratamiento
+                  psicológico individualizado. Atención de adultos con
+                  conductas adictivas sin sustancia: juego patológico,
+                  apuestas online, uso problemático de tecnologías, compras
+                  compulsivas, entre otras. Orientación a familias y
+                  prevención de recaídas. Para casos que requieren atención
+                  especializada en adolescencia, contamos con una red de
+                  derivación a profesionales de confianza.
+                </p>
               </div>
-              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-1">
-                <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
-                  <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
-                    school
-                  </span>
-                  <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
-                    Eje 4 — Formación profesional
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Capacitación e intercambio con colegas y profesionales de la
-                    salud. Protocolos de derivación. Fortalecimiento de la red
-                    profesional local en adicciones conductuales.
-                  </p>
-                </div>
+              <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
+                <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
+                  science
+                </span>
+                <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
+                  Eje 2 — Investigación
+                </h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Registro sistemático de casos, seguimiento de resultados
+                  clínicos. Revisión permanente de evidencia actualizada.
+                  Articulación con referentes nacionales e internacionales en
+                  el campo de las adicciones conductuales.
+                </p>
+              </div>
+              <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
+                <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
+                  group
+                </span>
+                <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
+                  Eje 3 — Prevención y comunidad
+                </h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Charlas abiertas y gratuitas para familias, docentes y
+                  vecinos. Talleres de sensibilización e información.
+                  Articulación con instituciones educativas y de salud. La
+                  información es nuestra primera herramienta de prevención.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-1">
+              <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
+                <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
+                  school
+                </span>
+                <h3 className="font-label-caps text-label-caps mb-2 uppercase tracking-widest text-on-surface">
+                  Eje 4 — Formación profesional
+                </h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Capacitación e intercambio con colegas y profesionales de la
+                  salud. Protocolos de derivación. Fortalecimiento de la red
+                  profesional local en adicciones conductuales.
+                </p>
               </div>
             </div>
           </div>
@@ -358,39 +344,64 @@ export default function Home() {
 
         <section id="sedes" className="mb-section-padding w-full scroll-mt-[100px]">
           <h2 className="font-display-md text-display-md mb-8 text-on-surface">
-            Sedes e instituciones articuladas
+            Sedes
           </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            <article className="rounded-sm border border-accent-gold/20 bg-card-surface p-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch">
+            <article className="flex h-full flex-col rounded-sm border border-accent-gold/20 bg-card-surface p-6">
+              <div className="mb-5 box-border flex h-64 shrink-0 items-center justify-center border-b border-accent-gold/25 px-2 md:h-72">
+                <img
+                  src="/fade.jpeg"
+                  alt="Logo Consultorios FADE"
+                  className="max-h-full max-w-full object-contain"
+                  width={780}
+                  height={240}
+                />
+              </div>
               <h3 className="font-label-caps text-label-caps mb-3 text-accent-gold">
                 Consultorios FADE
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Dirección: [completar con el diseñador]
+                Dirección: Moreno 3215, 1.er piso, of. 2, Mar del Plata
                 <br />
-                Teléfono: [completar]
-                <br />
-                Mail: [completar]
+                Tel.:{" "}
+                <a
+                  className="text-on-surface transition-colors hover:text-accent-gold"
+                  href="tel:+542234940697"
+                >
+                  223 4940697
+                </a>
               </p>
             </article>
-            <article className="rounded-sm border border-accent-gold/20 bg-card-surface p-6">
+            <article className="flex h-full flex-col rounded-sm border border-accent-gold/20 bg-card-surface p-6">
+              <div className="mb-5 box-border flex h-64 shrink-0 items-center justify-center border-b border-accent-gold/25 px-2 md:h-72">
+                <img
+                  src="/lucero.webp"
+                  alt="Logo Consultorios Lucero"
+                  className="max-h-full max-w-full origin-center scale-[0.88] object-contain md:scale-[0.9]"
+                  width={780}
+                  height={240}
+                />
+              </div>
               <h3 className="font-label-caps text-label-caps mb-3 text-accent-gold">
                 Consultorios Lucero
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Dirección: [completar]
+                Dirección: Córdoba 2893, Mar del Plata
                 <br />
-                Teléfono: [completar]
-                <br />
-                Mail: [completar]
-              </p>
-            </article>
-            <article className="rounded-sm border border-accent-gold/20 bg-card-surface p-6">
-              <h3 className="font-label-caps text-label-caps mb-3 text-accent-gold">
-                Colegio de Psicólogos PBA Distrito X
-              </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
-                Web: [completar]
+                Tel.:{" "}
+                <a
+                  className="text-on-surface transition-colors hover:text-accent-gold"
+                  href="tel:+542235220806"
+                >
+                  223 522-0806
+                </a>
+                {" · "}
+                <a
+                  className="text-on-surface transition-colors hover:text-accent-gold"
+                  href="tel:+542235446072"
+                >
+                  223 544-6072
+                </a>
               </p>
             </article>
           </div>
