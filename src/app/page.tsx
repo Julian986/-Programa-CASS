@@ -78,7 +78,7 @@ export default function Home() {
             </div>
           </div>
           <div id="ejes" className="mt-8 w-full scroll-mt-[100px] md:mt-10">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
                 <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
                   psychology_alt
@@ -125,8 +125,6 @@ export default function Home() {
                   información es nuestra primera herramienta de prevención.
                 </p>
               </div>
-            </div>
-            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-1">
               <div className="flex flex-col items-start rounded-sm border-t border-accent-gold bg-card-surface p-6 transition-colors duration-300 hover:bg-card-hover">
                 <span className="material-symbols-outlined mb-4 text-3xl text-accent-gold">
                   school
