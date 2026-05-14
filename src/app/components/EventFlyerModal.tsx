@@ -41,7 +41,7 @@ export default function EventFlyerModal() {
         <span className="material-symbols-outlined text-[18px] transition-transform duration-300 ease-out group-hover:translate-x-0.5">
           campaign
         </span>
-        Ver charla destacada
+        Ver próxima charla
       </button>
 
       {isOpen ? (

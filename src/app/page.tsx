@@ -438,7 +438,15 @@ export default function Home() {
                   WhatsApp: +54 9 223 522-0806
                 </a>
                 <a
-                  className="font-label-caps text-label-caps mt-4 flex items-center gap-2 rounded-sm bg-accent-gold px-6 py-2 text-hero-bg transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-gold/60"
+                  className="font-body-md text-body-md mt-4 text-on-surface-variant transition-colors duration-300 hover:text-accent-gold"
+                  href="https://www.instagram.com/programacass/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram: @programacass
+                </a>
+                <a
+                  className="font-label-caps text-label-caps mt-3 flex items-center gap-2 rounded-sm bg-accent-gold px-6 py-2 text-hero-bg transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-gold/60"
                   href="https://wa.me/5492235220806"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -509,6 +517,14 @@ export default function Home() {
               </a>
             ))}
           </nav>
+          <a
+            href="https://www.instagram.com/programacass/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-display-md text-sm font-semibold italic text-slate-500 underline decoration-1 transition-colors hover:text-accent-gold"
+          >
+            Instagram
+          </a>
           <p className="font-display-md max-w-md text-center text-sm italic text-slate-500">
             © 2026alt Programa CASS — Conductas Adictivas Sin Sustancia — Mar del
             Plata — Desde 2007.

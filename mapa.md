@@ -1,6 +1,12 @@
 
 
 Tasks:
+- SEO
+- QR
+
+
+
+
 
 - Evaluar de reducir tanta info en la seccion "que es el programa cass" o mostrar algo mas simple y si el usuario 
 
